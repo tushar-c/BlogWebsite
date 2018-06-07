@@ -4,11 +4,72 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <title>Blog</title>
+    <title>About</title>
       <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
       <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-      {{ post.title }}
-      {{ post.published_date }}
-      {{ post.text }}
+
   </head>
-  </html>
+  <style>
+.img1{
+  background-image: url( "{% static 'bio.jpg' %}");
+}
+.img2{
+  background-image: url( "{% static 'math.jpg' %}");
+}
+.img3{
+  background-image: url( "{% static 'ai.jpg' %}");
+}
+</style>
+
+  <body>
+    <div class="wrapper">
+      <div class="flex-container">
+        <div class="box header">
+          <h1>Tushar Chaturvedi</h1>
+
+            <nav>
+
+                <ul>
+
+                  <a href="{% url 'home' %}"><li>Home</li></a>
+                  <a href="{% url 'post_list' %}"><li>Blog</li></a>
+                  <a href="{% url 'about' %}"><li>About</li></a>
+                </ul>
+
+            </nav>
+
+          </div>
+
+      </div>
+
+        <div class="flex-container">
+            <div class="coversholder">
+            <div class="">
+
+            </div>
+            <div class="">
+
+            </div>
+            <div class="">
+
+            </div>
+            </div>
+      </div>
+
+
+        <div class="flex-container">
+            <div class="anim">
+            <div class="box content">
+            <p style="font-size: 40px"> {{ post.title }} </p>
+            <p style="font-size: 14px"> {{ post.published_date }} </p>
+            <br>
+            <p style="font-size: 20px"> {{ post.text }} </p>
+            </div>
+            </div>
+
+      </div>
+    </div>
+  </body>
+    <footer>
+    </footer>
+</html>
