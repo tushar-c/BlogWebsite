@@ -65,7 +65,7 @@
             <div class="anim">
             <div class="allother">
               {% for post in posts %}
-                <h1><a href="">{{ post.title }}</a></h1>
+                <h1><a href="{% url 'home' %}">>{{ post.title }}</a></h1>
                 <p> published date: {{ post.published_date }} </p>
                 <p>{{ post.text|linebreaksbr }}</p>
                 <br>

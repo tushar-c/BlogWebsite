@@ -14,3 +14,8 @@ def about(request):
 
 def home(request):
     return render(request, 'myblog/blog.html')
+
+
+def post_view(request, pk):
+    post = Post.objects.get(pk=pk)
+    return render(request, 'myblog/post_view.html', {'post':post})
