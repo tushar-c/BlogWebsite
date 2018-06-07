@@ -1,0 +1,12 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  </head>
+    {% for post in posts %}
+    <div>
+      <h1><a href="">{{ post.title }}</a></h1>
+      <p> published date: {{ post.published_date }} </p>
+      <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
+</html>

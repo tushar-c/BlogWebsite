@@ -1,0 +1,205 @@
+*{
+    font-family: "verdana";
+    margin: 0;
+}
+
+body{
+    background: #00;
+}
+
+html {
+      height: 99%;
+    }
+
+.wrapper{
+    width: 100%;
+    max-width: auto;
+    margin: 0 auto;
+}
+
+.allupper{
+
+    position: fixed;
+    width: 100%;
+
+}
+
+.allother{
+
+    padding-top: 100px;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.header h1{
+    font-family: 'Open Sans', sans-serif;
+}
+
+p{
+  font-family: 'Open Sans';
+}
+
+
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    height: auto;
+    min-width: 400px;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.coversholder{
+    display: flex;
+    flex: 1;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    background: #020202;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.coverholder{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex: 1;
+}
+
+.cover1{
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+}
+
+nav{
+    background: #000;
+}
+
+.img1{
+    background-image: url(Assets/bio.jpg);
+}
+
+.img2{
+    background-image: url(Assets/math.jpg);
+}
+
+.img3{
+    background-image: url(Assets/ai.jpg);
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+
+nav li{
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px;
+    font-kerning: 10;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav a {
+    text-decoration: none;
+    font-style: normal;
+    color: #fff;
+    flex-grow: 1;
+}
+
+nav li:hover{
+    background: #fff;
+    color: black;
+    transition: .5s ease;
+}
+
+nav li:hover a{
+    color: black;
+    transition: .5s ease;
+}
+
+.head{
+    background: #000;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    padding:20px;
+    font-family: 'Open sans';
+}
+
+.head p{
+  font-family: 'Open Sans';
+}
+
+@keyframes splash {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.anim {
+    animation: splash 1s;
+}
+
+.content{
+    text-align: center;
+    padding: 20px
+}
+
+.cont{
+    background: #000;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap
+}
+
+.cont img{
+    width: 50px;
+    height: 50px;
+}
+
+.cont p{
+    padding: 10px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.cover{
+    width: 200px;
+    height: 500px;
+}
+
+.cover img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+footer{
+    text-align: center;
+    padding: 50px
+}

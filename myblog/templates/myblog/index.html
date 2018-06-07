@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load static %}
+<html lang="en">
+  <head>
+    <title>Hi</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+  <body>
+
+    <style>
+.img1{
+    background-image: url( "{% static 'bio.jpg' %}");
+}
+.img2{
+    background-image: url( "{% static 'math.jpg' %}");
+}
+.img3{
+    background-image: url( "{% static 'ai.jpg' %}");
+}
+</style>
+
+
+    <div class="wrapper">
+    <div class="allupper">
+      <div class="flex-container">
+        <div class="box header">
+        <div class="anim">
+          <h1>Tushar Chaturvedi</h1>
+        </div>
+            <div class="anim">
+            <nav>
+
+                <ul>
+
+                  <a href="{% url 'home' %}"><li>Home</li></a>
+                  <a href="{% url 'post_list' %}"><li>Blog</li></a>
+                  <a href="{% url 'about' %}"><li>About</li></a>
+                </ul>
+
+            </nav>
+            </div>
+
+          </div>
+
+      </div>
+
+    </div>
+
+        <div class="flex-container">
+            <div class="coversholder">
+            <div class="box cover1 img1">
+            </div>
+            <div class="box cover1 img2">
+            </div>
+            <div class="box cover1 img3">
+            </div>
+            </div>
+      </div>
+
+
+        <div class="flex-container">
+            <div class="anim">
+            <div class="allother">
+              {% for post in posts %}
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p> published date: {{ post.published_date }} </p>
+                <p>{{ post.text|linebreaksbr }}</p>
+                <br>
+                <br>
+              {% endfor %}
+            </div>
+            </div>
+
+        </div>
+
+    </div>
+  </body>
+</html>
